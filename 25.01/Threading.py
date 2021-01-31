@@ -20,17 +20,17 @@ print(f"Starting Time: {starting_time.strftime('%m/%d/%Y, %H:%M:%S')}")
 
 threading_list = []
 
-# x = threading.Thread(target=download_images, args=("images.json",))
-# x.start()
+x = threading.Thread(target=download_images, args=("images.json",))
+x.start()
 
 
 
-with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-    executor.map(download_images, ["images.json"])
+# with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+#    executor.map(download_images, ["images.json"])
     
-print(f"Code Execution Time: {(datetime.datetime.today() - starting_time).seconds}")
-# download_images('images.json')
-
 # print(f"Code Execution Time: {(datetime.datetime.today() - starting_time).seconds}")
+download_images('images.json')
+
+print(f"Code Execution Time: {(datetime.datetime.today() - starting_time).seconds}")
 
 
