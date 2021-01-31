@@ -3,6 +3,7 @@ import json
 import yaml
 
 path = os.path.join(os.getcwd(),"sample_json.json")
+
 with open(path,"r") as file_json:
     data = json.load(file_json)
 final_list = []
@@ -15,6 +16,7 @@ for dict_ in data['items']:
         final_list.append(new_data)
 result = {"items":final_list}  
 print(result)
+
 with open("new_yaml.yml", "w") as file:
     yaml.dump(result, file, indent=4)
 # print(type(data))
