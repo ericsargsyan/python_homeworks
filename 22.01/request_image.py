@@ -34,7 +34,7 @@ class Image_png(Image_Request):
 
 url = input("Input URL: ")
 	
-test = Image_jpeg(url)
-test.download()
+image = Image_jpeg(url)
+image.download()
 
 
