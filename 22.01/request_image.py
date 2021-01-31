@@ -32,8 +32,9 @@ class Image_png(Image_Request):
 				photo.write(dw_photo.content)
 
 
+url = input("Input URL: ")
 	
-# test = Image_png("https://xkcd.com/")
-# test.download()
+test = Image_jpeg(url)
+test.download()
 
 
